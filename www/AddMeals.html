@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,width=device-width,height=device-height">
+<link rel="stylesheet" href = "./css/style.css">
+
+</head>
+
+<body>
+<!--all Navigational buttons placed in header-->
+<div id="head"></div>
+<!--contents will hold the information user wants-->
+<div id="box">
+	<form>
+	Title:<br>
+	<input type="text" name="Meal_Title" id="Meal_Title" size="43"><br>
+	Recipe Reference:<br>
+	<input type="text" name="Recipe_Ref" id="Recipe_Ref" value="eg. Recipe Book p4 / www.example.link/recipe" size="43"><br>
+	<table style="width:100%">
+		<tr>
+			<th>Ingredient:</th>
+			<th>Quantity:</th>
+			<th>Unit:</th>
+		</tr>
+		<tr>
+			<td><ul id= "ingredientsList"></ul></td>
+			<td><ul id="quantityList"></ul></td>
+			<td><ul id="unitList"></ul></td>
+		</tr>
+		<tr>
+			<td><input type="text" id="Ingredient"></td>
+			<td><input type="text" id="ingQuantity" value ="1" size="3"></td>
+			<td>
+				<select id ="quantityUnit">
+				<option value= "N/A">N/A</option>
+				<option value= "g">g</option>
+				<option value= "ml">ml</option>
+				</select>
+			</td>
+		</tr>
+	</table>
+			
+	<button class="button btn" type="button" onclick = "addIngredient()" id="addIngButton">Add Ingredient</button><br>
+	</form>
+</div>
+	<!--Footer can have the buttons that allow save added meal to "Meals" -->
+	<div id="bot">
+		<button class="button btn" type="button" onclick = "location.href='Meals.html';">Back</button>
+		<button class="button btn" type="button" onclick = "saveMealObj()">Save</button>
+	</div>
+
+<!-- FireBase Code -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+	 https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-database.js"></script>
+<!-- firebase config file -->
+<script src="js/FireBaseConfig.js"></script>
+<script src="js/AddMealScript.js"></script>
+<body>
+</html>

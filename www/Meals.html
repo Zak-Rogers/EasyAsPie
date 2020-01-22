@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<body>
+<link rel="stylesheet" href = "./css/style.css">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,width=device-width,height=device-height">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/MenuScript.js"></script>
+</head>
+<!--all Navigational buttons place in header-->
+<div id="head">
+	<div class = "Menu">
+	    <button class="button1 btn" onclick="location.href='AddMeals.html'">Add Meal</button>
+		<div id = "Menu" class = "Menu-Content">
+		</div>
+	</div>
+</div>
+<!--contents will hold the information user wants-->
+<div id="cnt">
+
+	<div>
+		<ul id = "MealList">
+		</ul>
+	</div>
+</div>
+
+<div id="bot">
+	<button type = "button" class="button btn" onclick = "location.href='MealPlanner.html';">Meal Planner</button>
+	<button type = "button" class="button btn" onclick = "location.href='ShoppingList.html';">Shopping List</button>
+</div>
+
+<!-- FireBase Code -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+	 https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-database.js"></script>
+<!-- firebase config file -->
+<script src="./js/FireBaseConfig.js"></script>
+<script src="./js/MealsScript.js"></script>
+
+</body>
+</html>

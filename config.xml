@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.easyaspie.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Easy As Pie</name>
+    <description>
+        7-Day Meal Planner. Add your Meals and create a meal plan or have one generated for you.
+		Generate a shoppinglist from your meal plan and add your own items
+    </description>
+    <author email="easyaspie.help@gmail.com" href="http://phonegap.com">
+        PhoneGap Team
+    </author>
+	<plugin name="cordova-plugin-whitelist" spec="~1.3.4" />
+    <icon src="./icon.png" />
+	<content src="index.html" />
+    <access origin="*" />
+	<allow-navigation href="https://www.gstatic.com/firebasejs/7.6.0/*" />
+	
+</widget>

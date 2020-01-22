@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,width=device-width,height=device-height">
+
+<link rel="stylesheet" href = "./css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/MenuScript.js"></script>
+</head>
+
+<body>
+
+<!--all Navigational buttons place in header-->
+<div id="head">
+	<div class = "Menu">
+		<button class="button1 btn" onclick = "showHideMenu()">Menu</button>
+		<div id = "Menu" class = "Menu-Content">
+			<button class="button btnRow" onClick="todaysList()">Generate Todays List</button>
+			<button class="button btnRow" onClick="sevenDList()">Generate a 7-Day Shopping List<button>
+		</div>
+	</div>
+</div>
+<!--contents will hold the information user wants-->
+<div id="box">
+	<table sytle="width:100%;">
+		<tr>
+			<th>Items:</th>
+			<th>Quantity:</th>
+			<th>Unit:</th>
+		</tr>
+		<tr>
+			<td><ul id = "ShoppingList"></ul></td>
+			<td><ul id="QuantityList"></ul></td>
+			<td><ul id="UnitList"></ul></td>
+		</tr>
+		
+	</table>
+	
+		
+	<form>
+	Add Item To Shopping List:<br>
+	<table>
+		<tr>
+			<th>Items:</th>
+			<th>Quantity:</th>
+			<th>Unit:</th>
+		</tr>
+		<tr>
+			<td><input type="text" name="New_Item" id = "New_Item"><br></td>
+			<td><input type="text" name="New_Item_Quantity" id = "New_Item_Quantity" value = "1" size="3"><br></td>
+			<td>
+				<select id ="Quantity_Unit">
+				<option value= "N/A">N/A</option>
+				<option value= "g">g</option>
+				<option value= "ml">ml</option>
+				</select>
+			</td>
+		</tr>
+	</table>
+	
+	
+	<button type = "button" class="button btn" onclick = "addItem()">Add Item</button>
+	<button type ="button" class="button btn" onclick= "clearList()">Clear Shopping List</button>
+	
+	</form>
+</div>
+<!--Footer can have the buttons that allow to add an item to shopping list or remove-->
+<div id="bot">
+	<button type = "button" class="button btn" onclick = "location.href='MealPlanner.html';">Meal Planner</button>
+	<button type = "button" class="button btn" onclick = "location.href='Meals.html';">Meals</button>
+</div>
+
+<!-- FireBase Code -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+	 https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-database.js"></script>
+<!-- firebase config file -->
+<script src="js/FireBaseConfig.js"></script>
+<script src="js/ShoppingListScript.js"></script>
+
+</body>
+</html>
